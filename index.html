@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Supabase 게시판</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Supabase CRUD 게시판</h1>
+
+  <section>
+    <h2>회원가입 / 로그인</h2>
+
+    <input id="email" type="email" placeholder="이메일 입력">
+    <input id="password" type="password" placeholder="비밀번호 입력">
+
+    <button onclick="signUp()">회원가입</button>
+    <button onclick="login()">로그인</button>
+    <button onclick="logout()">로그아웃</button>
+
+    <p id="userInfo">로그인 상태: 확인 중</p>
+  </section>
+
+  <section>
+    <h2>게시글 작성</h2>
+
+    <input id="title" type="text" placeholder="제목 입력">
+    <textarea id="content" placeholder="내용 입력"></textarea>
+
+    <button onclick="createPost()">글 작성</button>
+  </section>
+
+  <section>
+    <h2>게시글 목록</h2>
+    <div id="postList"></div>
+  </section>
+
+  <!-- Supabase 라이브러리 불러오기 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- 내가 작성할 JS 파일 연결 -->
+  <script src="script.js"></script>
+
+</body>
+</html>
